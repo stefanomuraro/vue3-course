@@ -1,19 +1,19 @@
 <template>
-    <div class="flex">
-        <div class="m-auto">
-          <h1 class="my-4 text-2xl text-center">{{title}}: {{herosCount}}</h1>
-          <ul>
-              <li class="flex justify-between" v-for="(hero,index) in heroes" v-bind:key="index">
-                  <div>{{hero}}</div>
-                  <button v-on:click="deleteHero(index)">X</button>
-              </li>
-          </ul>
-          <form class="mt-10" v-on:submit.prevent="addHero">
-              <input class="border rounded" type="text" v-model.trim="newHero" placeholder="Type hero name">
-              <button class="border rounded bg-green-400 ml-4" type="submit" v-bind:disabled='!isActive'>Add Hero</button>
-          </form>
+    <div id="container">
+        <div class="m-5">
+            <h1 class="my-4 text-2xl text-center">{{title}}: {{herosCount}}</h1>
+            <ul>
+                <li class="flex justify-between" v-for="(hero,index) in heroes" v-bind:key="index">
+                    <div>{{hero}}</div>
+                    <button v-on:click="deleteHero(index)">X</button>
+                </li>
+            </ul>
+            <form class="mt-10" v-on:submit.prevent="addHero">
+                <input ref="newHeroInput" class="border rounded" type="text" v-model.trim="newHero" placeholder="Type hero name">
+                <button class="border rounded bg-green-400 ml-4" type="submit" v-bind:disabled='!isActive'>Add Hero</button>
+            </form>
         </div>
-        <div class="m-5 w-1/2">
+        <div class="m-5">
             <strong>Computed Property:</strong>
             <p>{{randC}}</p>
             <p>{{randC}}</p>
@@ -72,14 +72,24 @@ export default {
     randC() {
       return this.heroes.length + Math.random()
     }
+  },
+  mounted() {
+    this.$refs.newHeroInput.focus()
   }
 }
 </script>
 
-<style>
+<style scoped>
+#container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+}
+
 ul {
-  list-style-type: disc;
-  list-style-position: inside
+    list-style-type: disc;
+    list-style-position: inside
 }
 
 ul:last-of-type {
