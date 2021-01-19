@@ -1,7 +1,10 @@
 # Vue 3 Full Course Project
 
 ## Course video
-[YouTube Link](https://youtu.be/e-E0UB-YDRk)
+[YouTube link](https://youtu.be/e-E0UB-YDRk)
+
+## Deployed app
+This app was hosted with Firebase Hosting. [Click here](https://vue3-course.web.app) to see it.
 
 ## Test users
 ```
