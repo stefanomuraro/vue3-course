@@ -6,7 +6,7 @@
                 <div 
                     v-for="msg in state.messages" 
                     :key="msg.message" 
-                    :class="msg.userId === state.userId ? 'text-right' : ''"
+                    :class="msg.userId === userId ? 'text-right' : ''"
                 >
                     {{msg.message}}
                 </div>
@@ -21,27 +21,29 @@
                 >
             </div>
         </div>
+        <a class="mt-8" target="_blank" href="https://next.vuex.vuejs.org/">&gt;&gt; Vuex Docs &lt;&lt;</a>
     </section>
 </template>
 
 <script>
-import { onMounted, reactive } from 'vue'
-import firebase, {chatRef} from "../utilities/init-firebase";
+import { computed, onMounted, reactive } from 'vue'
+import {chatRef} from "../utilities/init-firebase";
+import {useStore} from 'vuex'
 
 export default {
     setup() {
         const state = reactive({
-            userId: '',
             messages: [],
             input: ''
         })
 
+        const store = useStore()
+        const userId = computed(() => store.state.authUser.uid)
+
         onMounted(() => {
             // listen to changes in the db
             chatRef.on('child_added', snapshot => {
-                state.userId = firebase.auth().currentUser.uid
                 state.messages.push({key: snapshot.key, ...snapshot.val()})
-                console.log(state.messages);
             })
         })
         
@@ -54,7 +56,7 @@ export default {
             state.input = ''
         }
 
-        return {state, addMessage}
+        return {state, addMessage, userId}
     }
 }
 </script>

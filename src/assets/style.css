@@ -1,13 +1,13 @@
 /* #container {
-    background-color: grey;
-    color: #fff;
+  background-color: grey;
+  color: #fff;
 }
 nav {
-    background-color: darkblue;
-    color: #fff;
-    height: 50px;
-    font-size: 32px;
-    line-height: 50px;
+  background-color: darkblue;
+  color: #fff;
+  height: 50px;
+  font-size: 32px;
+  line-height: 50px;
 } */
 
 @tailwind base;

@@ -1,4 +1,17 @@
-# first-vue-app
+# Vue 3 Full Course Project
+
+## Course video
+[YouTube Link](https://youtu.be/e-E0UB-YDRk)
+
+## Test users
+```
+Email: user1@test.com
+Password: password
+```
+```
+Email: user2@test.com
+Password: password
+```
 
 ## Project setup
 ```
