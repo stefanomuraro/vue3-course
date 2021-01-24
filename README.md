@@ -1,10 +1,10 @@
 # Vue 3 Full Course Project
 
-## Course video
-[YouTube link](https://youtu.be/e-E0UB-YDRk)
+## Description
+In this repo you can find the project developed along the [Vue 3 Full Course](https://youtu.be/e-E0UB-YDRk).
 
 ## Deployed app
-This app was hosted with Firebase Hosting. [Click here](https://vue3-course.web.app) to see it.
+The project app was deployed on Firebase. [Click here](https://vue3-course.web.app) to see it.
 
 ## Test users
 ```
