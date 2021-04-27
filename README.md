@@ -1,7 +1,7 @@
 # Vue 3 Course Project
 
 ## Description
-In this repo you can find the project developed along the [Vue 3 course](https://youtu.be/e-E0UB-YDRk).
+In this repo you can find the project developed throughout this [Vue 3 course](https://youtu.be/e-E0UB-YDRk).
 
 ## Deployed app
 The project app was deployed on Firebase. [Click here](https://vue3-course.web.app) to see it.
