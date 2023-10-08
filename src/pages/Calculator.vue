@@ -127,7 +127,6 @@ export default {
 
     const handleKeydown = (event) => {
       pressed(event.key);
-      console.log(event.key);
     };
 
     useWindowEvent("keydown", handleKeydown);
