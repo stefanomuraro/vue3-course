@@ -14,9 +14,9 @@
 
 <script>
 import marked from 'marked'
-// Two ways of reusing logic
-//import debounce from '../utilities/mixins/debounce' // method 1: using Mixins
-import useDebounce from '../utilities/composition/useDebounce' // method 2: using Composition API
+// Two ways of reusing logic:
+// import debounce from '../utilities/mixins/debounce' // method 1: using Mixins
+import useDebounce from '../utilities/composition/useDebounce' // method 2: using Composable function (Composition API) --> preferred approach for Vue 3
 
 export default {
   data() {
